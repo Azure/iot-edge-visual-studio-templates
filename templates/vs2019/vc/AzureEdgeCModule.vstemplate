@@ -1,0 +1,31 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>AzureIoTEdgeModule</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>VC</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>AzureIoTEdgeModule</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+	<Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="AzureIoTEdgeModule.vcxproj" File="AzureIoTEdgeModule.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName=".gitignore">.gitignore</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName=".dockerignore">.dockerignore</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Dockerfile.amd64">Dockerfile.amd64</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Dockerfile.amd64.debug">Dockerfile.amd64.debug</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Dockerfile.windows-amd64">Dockerfile.windows-amd64</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Dockerfile.arm32v7">Dockerfile.arm32v7</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="main.c">main.c</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="module.json">module.json</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="CMakeLists.txt">CMakeLists.txt</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="BuildWindowsBits.cmd">BuildWindowsBits.cmd</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

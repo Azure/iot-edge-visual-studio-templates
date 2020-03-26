@@ -1,0 +1,11 @@
+# escape=`
+FROM mcr.microsoft.com/windows/nanoserver:1809
+
+# Keep this argument to keep backward compatibility and avoid warning messages when build
+ARG binPath
+
+WORKDIR "c:\app"
+
+COPY bin/iotedgeoutput ./
+
+ENTRYPOINT ["IotEdgeModule1.exe"]
