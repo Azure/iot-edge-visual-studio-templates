@@ -94,6 +94,7 @@
     <None Include="Dockerfile.amd64.debug" />
     <None Include="Dockerfile.windows-amd64" />
     <None Include="Dockerfile.arm32v7" />
+    <None Include="Dockerfile.arm64v8" />
     <None Include="module.json" />
     <None Include="BuildWindowsBits.cmd" />
   </ItemGroup>

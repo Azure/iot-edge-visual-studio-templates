@@ -22,6 +22,7 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="Dockerfile.amd64.debug">Dockerfile.amd64.debug</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Dockerfile.windows-amd64">Dockerfile.windows-amd64</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Dockerfile.arm32v7">Dockerfile.arm32v7</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Dockerfile.arm64v8">Dockerfile.arm64v8</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="main.c">main.c</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="module.json">module.json</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="CMakeLists.txt">CMakeLists.txt</ProjectItem>
