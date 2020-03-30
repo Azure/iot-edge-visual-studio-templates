@@ -24,6 +24,8 @@
       <ProjectItem ReplaceParameters="true" >Dockerfile.amd64.debug</ProjectItem>
       <ProjectItem ReplaceParameters="true" >Dockerfile.arm32v7</ProjectItem>
       <ProjectItem ReplaceParameters="true" >Dockerfile.arm32v7.debug</ProjectItem>
+	  <ProjectItem ReplaceParameters="true" >Dockerfile.arm64v8</ProjectItem>
+      <ProjectItem ReplaceParameters="true" >Dockerfile.arm64v8.debug</ProjectItem>
       <ProjectItem ReplaceParameters="true" >Dockerfile.windows-amd64</ProjectItem>
       <ProjectItem ReplaceParameters="true" >module.json</ProjectItem>
       <ProjectItem>.gitignore</ProjectItem>

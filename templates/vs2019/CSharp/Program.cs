@@ -42,8 +42,8 @@ namespace SampleModule
         /// </summary>
         static async Task Init()
         {
-            AmqpTransportSettings amqpSetting = new AmqpTransportSettings(TransportType.Amqp_Tcp_Only);
-            ITransportSettings[] settings = { amqpSetting };
+            MqttTransportSettings mqttSetting = new MqttTransportSettings(TransportType.Mqtt_Tcp_Only);
+            ITransportSettings[] settings = { mqttSetting };
 
             // Open a connection to the Edge runtime
             ModuleClient ioTHubModuleClient = await ModuleClient.CreateFromEnvironmentAsync(settings);
@@ -75,13 +75,16 @@ namespace SampleModule
 
             if (!string.IsNullOrEmpty(messageString))
             {
-                var pipeMessage = new Message(messageBytes);
-                foreach (var prop in message.Properties)
+                using (var pipeMessage = new Message(messageBytes))
                 {
-                    pipeMessage.Properties.Add(prop.Key, prop.Value);
+                    foreach (var prop in message.Properties)
+                    {
+                        pipeMessage.Properties.Add(prop.Key, prop.Value);
+                    }
+                    await moduleClient.SendEventAsync("output1", pipeMessage);
+                
+                    Console.WriteLine("Received message sent");
                 }
-                await moduleClient.SendEventAsync("output1", pipeMessage);
-                Console.WriteLine("Received message sent");
             }
             return MessageResponse.Completed;
         }
